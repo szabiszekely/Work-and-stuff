@@ -1,0 +1,119 @@
+Building configuration...
+
+Current configuration : 1825 bytes
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname wmtech-1
+!
+!
+!
+ip domain-name wmszki.hu
+!
+username lofasz secret 5 $1$mERr$3HhIgMGBA/9qNmgzccuxv0
+username rozsi privilege 1 password 0 
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/3
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/4
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/5
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/6
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/7
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/8
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/9
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/10
+ switchport access vlan 88
+ switchport mode access
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan88
+ ip address 192.168.1.2 255.255.255.0
+!
+!
+!
+!
+line con 0
+!
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
